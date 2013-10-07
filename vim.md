@@ -3,16 +3,21 @@
 
 Modules relavant to Haskell development:
 
-- pathogen
-- haskellmode-vim
-- vim-haskellfold
-- syntastic
-- vimproc
-- ghcmod-vim
-- hdevtools
-- vim2hs
-- cumino
-- vim-hoogle
+| Module     | Best Features |
+|------------|---------------|
+| pathogen   | base requirement |
+| haskellmode-vim | syntax coloring |
+| syntastic  | automatic compile check on save |
+| vimproc    | requirement for ghcmod-vim |
+| ghcmod-vim | running hlint |
+| hdevtools  | type interrogation |
+| vim-haskellfold | better folding |
+| vim2hs     | ... | 
+| vim-hoogle | hoogle queries |
+| neco-ghc   | name completion |
+| cumino     | ghci interaction (requires python) |
+| ariadne    | go-to definitions |
+| scion      | ... (requires python) |
 
 Other resources:
 
@@ -36,6 +41,8 @@ Install via pathogen:
 
     cd ~/.vim/bundle
     git clone https://github.com/lukerandall/haskellmode-vim.git
+
+Might have use `:GHCReload` to get type info commands working.
 
 ### vim-haskellfold
 
@@ -72,7 +79,7 @@ Make sure the cabal package `ghc-mod` is installed:
 Then install via the following commands:
 
     cd ~/.vim/bundle
-    wget-and-unzip 'http://www.vim.org/scripts/script.php?script_id=4473'
+    git clone https://github.com/eagletmt/ghcmod-vim.git
 
 ### hdevtools
 
@@ -100,10 +107,26 @@ Add the following lines to your .vimrc file:
     cd ~/.vim/bundle
     git clone https://github.com/Twinside/vim-hoogle.git
 
-### cumino
-
 ### neco-ghc
 
     cd ~/.vim/bundle
     git clone https://github.com/ujihisa/neco-ghc.git
+
+### cumino
+
+Requires vim with python support. See https://github.com/adinapoli/cumino
+
+### ariadne
+
+Install the Ariadne server:
+
+  cabal install ariadne
+
+Install the vim plugin:
+
+  https://github.com/feuerbach/ariadne-vim
+
+### scion
+
+See https://github.com/nominolo/scion
 
